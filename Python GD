@@ -19,10 +19,10 @@ FPS = 60
 # BACKGROUND MUSIC & SOUND EFFECTS
 # ================================================================
 
-pygame.mixer.music.load("level1.wav")
-pygame.mixer.music.set_volume(0.7)
+pygame.mixer.music.load("./audio/level1.ogg")
+pygame.mixer.music.set_volume(100)
 
-explode_sound = pygame.mixer.Sound("explode.wav")
+explode_sound = pygame.mixer.Sound("./audio/explode.ogg")
 explode_sound.set_volume(0.9)
 
 # ================================================================
