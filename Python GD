@@ -14,7 +14,6 @@ info = pygame.display.Info()
 SCREEN_WIDTH = info.current_w
 SCREEN_HEIGHT = info.current_h
 FPS = 60
-
 # ================================================================
 # BACKGROUND MUSIC & SOUND EFFECTS
 # ================================================================
@@ -31,7 +30,7 @@ explode_sound.set_volume(0.9)
 
 GROUND_Y = int(SCREEN_HEIGHT * 0.8)
 
-GRAVITY = 1.1
+GRAVITY = 1
 JUMP_STRENGTH = -20
 PAD_JUMP_STRENGTH = -30
 
@@ -76,7 +75,7 @@ pygame.display.set_caption("Geometry Dash")
 clock = pygame.time.Clock()
 
 font = pygame.font.SysFont(
-    "pixel",
+    "serif",
     int(SCREEN_HEIGHT * 0.04),
     bold=True
 )
@@ -1382,7 +1381,7 @@ def run_game(attempt_count):
             )
 
             esc_font = pygame.font.SysFont(
-                "pixel",
+                "serif",
                 int(
                     SCREEN_HEIGHT * 0.025
                 )
