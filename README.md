@@ -25,8 +25,7 @@ and here is a link to my profile:
 
 and here is the code if you want to see:
 
-```python
-
+```py
 import random
 import sys
 import time
