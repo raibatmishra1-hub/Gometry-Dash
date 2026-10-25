@@ -1,7 +1,5 @@
 import asyncio
 import random
-import sys
-import time
 import pygame
 
 # ================================================================
@@ -103,7 +101,7 @@ def player_died():
 # EXIT
 # ================================================================
 
-def clean_exit():
+async def clean_exit():
 
     pygame.mixer.music.stop()
 
@@ -111,13 +109,12 @@ def clean_exit():
 
     pygame.display.flip()
 
-    time.sleep(0.2)
+    await asyncio.sleep(0.2)
 
     pygame.mixer.stop()
 
     pygame.quit()
 
-    sys.exit()
 
 
 # ================================================================
@@ -916,7 +913,7 @@ def draw_scrolling_floor(
 # GAME
 # ================================================================
 
-def run_game(attempt_count):
+async def run_game(attempt_count):
 
     # Start/restart background music
     start_music()
@@ -950,13 +947,17 @@ def run_game(attempt_count):
 
             if event.type == pygame.QUIT:
 
-                clean_exit()
+                await clean_exit()
+
+                return False
 
             if event.type == pygame.KEYDOWN:
 
                 if event.key == pygame.K_ESCAPE:
 
-                    clean_exit()
+                    await clean_exit()
+
+                    return False
 
                 if (
                     event.key in [
@@ -1420,6 +1421,8 @@ def run_game(attempt_count):
 
         pygame.display.flip()
 
+        await asyncio.sleep(0)
+
     return False
 
 
@@ -1427,10 +1430,13 @@ def run_game(attempt_count):
 # MAIN LOOP
 # ================================================================
 
-current_attempt = 1
+async def main():
 
-while True:
+    current_attempt = 1
 
-    if run_game(current_attempt):
+    while await run_game(current_attempt):
 
         current_attempt += 1
+
+
+asyncio.run(main())
