@@ -1,11 +1,13 @@
-# Gometry-Dash
+# DESCRIPTION
 ## **DISCLAIMER**:
 
-Copyright from RobTop Games to GitHub
+RobTop Games ©" for background music
+"Robtop Games ©" for die SFX
+Level idea from "The Impossible Dash ©"
 
 ## description
 
-geometry dash is a rythem based type of platformer.
+The Impossible Dash is a rythem based type of platformer.
 
 ## INSTRUCTIONS
 
