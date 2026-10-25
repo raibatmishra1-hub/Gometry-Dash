@@ -1,9 +1,9 @@
 # DESCRIPTION
 ## **DISCLAIMER**:
 
-RobTop Games ©" for background music
-"Robtop Games ©" for die SFX
-Level idea from "The Impossible Dash ©"
+- RobTop Games ©" for background music
+- "Robtop Games ©" for die SFX
+- Level idea from "The Impossible Dash ©"
 
 ## description
 
