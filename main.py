@@ -87,7 +87,6 @@ def start_music():
 
     pygame.mixer.music.play(-1)
 
-
 def player_died():
 
     # Stop background music immediately
